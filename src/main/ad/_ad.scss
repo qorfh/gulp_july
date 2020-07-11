@@ -1,0 +1,116 @@
+#ad{
+    width: 100%;
+    padding: 80px 0 150px;
+    box-sizing: border-box;
+    background: #eee;
+
+    h1{
+        font: 80px/1.4 'Montserrat', sans-serif;
+        text-align: center;
+    }
+    .inner{
+        width: 1180px;
+        margin: 0px auto;
+
+        .bannerWrap{
+            width: 100%;
+            margin: 0px auto;
+            position: relative;
+            padding: 0px 60px;
+            box-sizing: border-box;
+
+            .prev{
+                display: block;
+                width: 20px; height: 40px;
+                position: absolute;
+                left: 10px;
+                top: 30%; margin-top: -40px;
+                background-image:url(../img/btnPrev.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .next{
+                display: block;
+                width: 20px; height: 40px;
+                position: absolute;
+                right: 10px;
+                top: 30%; margin-top: -40px;
+                background-image: url(../img/btnNext.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .banner{
+                overflow: hidden;
+
+                ul{
+                    width: calc((100% / 4) * 8); // 250%
+                    margin-left: calc(-100% / 4);
+                    // 4 : 배너에 보이고 싶은 갯수
+                    // 8 : 배너 슬라이드 갯수
+                    &::after{
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+                    li{
+                        width: calc(100% / 8);
+                        height: 180px;
+                        float: left;
+                        font-size: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-position:center;
+                        box-sizing: border-box;
+                        margin-right: 10px;
+
+                        &.pic1{background-image:url(../img/architecture05.jpg)}
+                        &.pic2{background-image:url(../img/architecture06.jpg)}
+                        &.pic3{background-image:url(../img/architecture07.jpg)}
+                        &.pic4{background-image:url(../img/architecture01.jpg)}
+                        &.pic5{background-image:url(../img/architecture02.jpg)}
+                        &.pic6{background-image:url(../img/architecture03.jpg)}
+                        &.pic7{background-image:url(../img/architecture04.jpg)}
+                        &.pic8{background-image:url(../img/architecture08.jpg)}
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+
+/* ------tablet-------- */
+@media screen and (max-width:1179px){
+    
+    #ad .inner{
+        width: 100%;
+        .bannerWrap {
+            .banner {
+                height: 150px;
+                ul{
+                    width: calc((100% / 2) * 10); 
+                    margin-left: calc(-100% / 2);
+                }
+            }
+            .next,.prev{
+                top:60%;
+            }
+        }
+        
+    }
+    
+}
+
+
+/* ------mobile-------- */
+@media screen and (max-width:539px){  
+    #ad .inner .bannerWrap .banner ul{
+        width: calc((100% / 1) * 10); 
+        margin-left: calc(-100% / 1);
+    }
+    #ad h1{font-size:30px;}
+}

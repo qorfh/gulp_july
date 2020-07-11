@@ -1,0 +1,81 @@
+#sub_visual.visual_department {
+    // background:lightblue;
+}
+.department {
+
+    .division{
+        width: 60%; height: 70vh;
+        margin: 0 auto;
+        background: url(../img/bgDivision.jpg) no-repeat center top;
+        background-size: contain;
+
+        ul{
+            position: absolute;
+            top: -1000px; left: 0;
+            opacity: 0;
+        }
+
+    }
+}
+
+
+/* ------tablet-------- */
+@media screen and (max-width:$tablet){ 
+
+    .department {
+    
+        .division{
+            height: auto;
+            background: url(../images/bgDivision.jpg) no-repeat center -9999px;
+    
+            ul{
+                position: relative;
+                top: 0px; left: 0;
+                opacity: 1;
+
+                // 1depth
+                li{
+                    span{
+                        display: block;
+                        width: 50%; height: 60px;
+                        text-align: center;
+                        font:bold 16px/60px '맑은 고딕';
+                        color: #fff;
+                        background: #000;
+                        border-radius: 60px;
+                    }
+                    ul{
+
+                        // 2depth
+                        li{
+                            
+                            span{
+                                background: #666;
+                                transform: translateX(80px);
+                                margin: 20px;
+                            }
+                            ul{
+
+                                //3depth
+                                li{
+                                    span{
+                                        background: #999;
+                                        transform: translateX(160px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+    
+}
+
+
+/* ------mobile-------- */
+@media screen and (max-width:$mobile){  
+    
+}

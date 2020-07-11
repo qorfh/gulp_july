@@ -1,0 +1,72 @@
+@charset 'utf-8';
+
+$tablet : 1179px;
+$mobile : 539px;
+
+//reset
+* {margin:0px; padding:0px;}
+ul,ol,li {list-style:none;}
+a {text-decoration:none; color:#555;}
+img, fieldset{border: 0;}
+table,th,td{border-collapse: collapse;}
+input,select,textarea,form,img,label{vertical-align: middle;box-sizing: border-box;}
+textarea{resize: none;}
+.hidden{position: absolute; top: -99999px; opacity: 0;}/*화면에 보이기는 싫은데 지우면 안될 때*/
+
+
+// main
+@import 'main/header/header';
+@import 'main/visual/visual';
+@import 'main/news/news';
+@import 'main/slide/slide';
+@import 'main/detail/detail';
+@import 'main/notice/notice';
+@import 'main/tabmenu/tabmenu';
+@import 'main/ad/ad';
+@import 'main/footer/footer';
+
+// sub
+@import "sub/header/header";
+@import "sub/footer/footer";
+@import 'sub/community/community';
+@import 'sub/location/location';
+@import 'sub/gallery/gallery';
+@import 'sub/department/department';
+@import 'sub/member/member';
+
+//sub common layout
+#sub_visual {
+    position: relative;
+    height: 300px;
+    .inner{
+        width:1100px; height:300px; background:#f2f2f2;
+        position: absolute;
+        right: 0;
+    }
+}
+#content {
+    width:100%; padding:100px 0px; box-sizing:border-box;
+
+    .inner {
+        width:1180px; min-height:300px; margin:0px auto;
+
+        h1 {
+            font:20px/1 'arial'; color:#555; margin-bottom:50px;
+
+            &::before {
+                content:''; display:block; width:50px; height:1px; 
+                background:#888; margin-bottom:20px;
+            }
+        }
+    }
+}
+
+/* ------tablet-------- */
+@media screen and (max-width:$tablet){ 
+   #content .inner{
+       width: 100%;
+       padding: 0 20px;
+       box-sizing: border-box;
+    }
+
+}
