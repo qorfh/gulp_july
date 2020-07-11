@@ -25,6 +25,7 @@ $(document).ready(function(){
     
     getSubMaxHeight();
 
+
     //gnb영역에 마우스 오버시 2depth. bgGnb 보임
     $header.on('mouseenter',openSub);    
 
