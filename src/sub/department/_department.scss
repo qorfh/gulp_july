@@ -2,11 +2,14 @@
     // background:lightblue;
 }
 .department {
+    .inner{
+        background: #f7f7f7;
+    }
 
     .division{
         width: 60%; height: 70vh;
         margin: 0 auto;
-        background: url(../img/bgDivision.jpg) no-repeat center top;
+        background: url(../img/bgDivision.png) no-repeat center center;
         background-size: contain;
 
         ul{
@@ -26,7 +29,7 @@
     
         .division{
             height: auto;
-            background: url(../images/bgDivision.jpg) no-repeat center -9999px;
+            background: url(../images/bgDivision.png) no-repeat center -9999px;
     
             ul{
                 position: relative;
