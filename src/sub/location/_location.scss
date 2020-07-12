@@ -1,3 +1,28 @@
-#sub_visual.visual_location {
-    // background:orange;
+#map{
+    width:100%; height:500px; background:#000;
+    filter:grayscale(1); transition:1s;
+
+    &:hover{
+        filter:grayscale(0);
+    }
+}
+
+#traffic{
+    margin-top:20px; float:left;
+
+    >li{
+        width:200px; height:40px; background:#555;
+    font:bold 12px/40px 'arial'; color:#fff; text-align:center;
+    float:left; margin-right:10px; cursor:pointer;
+    }
+}
+
+#branch{
+    margin-top:20px; float:right;
+
+    >li{
+        width:200px; height:40px; background:#555;
+        font:bold 12px/40px 'arial'; color:#fff; text-align:center;
+        float:left; margin-right:10px; cursor:pointer;
+    }
 }
