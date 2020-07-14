@@ -107,6 +107,20 @@ $(document).ready(function(){
         });
     });
 
+	// popup open
+	$('body').on('click', '.flicker article .inner' , function(e){
+		e.preventDefault();
+		console.log('click');
+		var imgSrc = $(this).children('a').attr('href');
+
+		$('.imgPop>img').attr({src : imgSrc});
+		$('.imgPop').fadeIn();
+	});
+
+	// popup close
+	$('.imgPop span').on('click',function(){
+        $('.imgPop').fadeOut();
+    });
 }); 
 
 

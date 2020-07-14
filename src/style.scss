@@ -4,6 +4,7 @@ $tablet : 1179px;
 $mobile : 539px;
 
 //reset
+body{font-family: 'Prompt', sans-serif;}
 * {margin:0px; padding:0px;}
 ul,ol,li {list-style:none;}
 a {text-decoration:none; color:#555;}
@@ -86,6 +87,10 @@ textarea{resize: none;}
 
 /* ------tablet-------- */
 @media screen and (max-width:$tablet){ 
+    #sub_visual{
+        .inner{width:100%;}
+    }
+    
    #content .inner{
        width: 100%;
        padding: 0 20px;

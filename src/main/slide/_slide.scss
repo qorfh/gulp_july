@@ -11,7 +11,8 @@
         cursor: pointer;
 
         h2{
-            font: 20px/1.4 'Oswald', sans-serif;
+            font-size : 20px;
+            line-height: 1.4;
             letter-spacing: 2px;
             position:absolute;
             top:40px;
@@ -20,7 +21,8 @@
             color:#f7f7f7;
         }
         span{
-            font: 11px/1.4 'Oswald', sans-serif;
+            font-size : 11px;
+            line-height: 1.4;
             position:absolute;
             bottom:80px;
             left:-15px;
@@ -34,7 +36,9 @@
         display:none;
         padding-bottom:20px; 
         margin-bottom:40px;
-        font: bold 30px/1.4 'arial'; 
+        font-size : 30px;
+        line-height: 1.4;
+        font-weight:bold;
         color: #b3b3b3; 
         text-align:center;
         position:relative;

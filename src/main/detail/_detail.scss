@@ -25,7 +25,11 @@
         width:580px;
         margin:80px auto 0;
 
-        h1{font:500 100px/1 'Oswald';}
+        h1{
+            font-size : 100px;
+            line-height: 1;
+            font-weight:bold;
+        }
         .pic{
             float:left;
             width:200px;

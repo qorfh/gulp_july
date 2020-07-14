@@ -8,10 +8,106 @@
     <div class="box"></div>
 </figure>
 
-<section id="content" class="member">
+<section id="content" class="content member">
     <div class="inner">
-        <h1 class="hidden">MEMBER</h1>
+        <h1 class="hidden">회원가입</h1>
+
+        <form action="/member.php" method="post" id="join">
+            <fieldset>
+                <legend class="hidden">회원가입</legend>
+                <h2>Notice & Terms</h2>
+                <div class="agreement">
+                    <textarea>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestiae repudiandae harum eaque voluptatum sunt, quae quasi odio earum quis dolores consequuntur nulla veritatis, perspiciatis inventore error! Maiores, facere quas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestiae repudiandae harum eaque voluptatum sunt, quae quasi odio earum quis dolores consequuntur nulla veritatis, perspiciatis inventore error! Maiores, facere quas?Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestiae repudiandae harum eaque voluptatum sunt, quae quasi odio earum quis dolores consequuntur nulla veritatis, perspiciatis inventore error! Maiores, facere quas?</textarea>
+                    
+                    <input type="checkbox" id="terms" name="terms"></input>
+                    <label  for="terms">위의 내용을 읽어보았으며 동의합니다.</label>
+                </div>
+
+                <h2>Member Information</h2>
+                <table>
+                    <caption class="hidden">회원정보</caption>
+                    <tr>
+                        <th>
+                            <label for="userid">User ID</label>
+                        </th>
+                        <td>
+                            <input type="text" id="userid" name="userid" placeholder='아이디를 입력하세요' class="required">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="pwd">Password</label>
+                        </th>
+                        <td>
+                            <input type="password" id="pwd" name="pwd" placeholder="패스워드를 입력하세요" class="required">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="pwd2">Password</label>
+                        </th>
+                        <td>
+                            <input type="password" id='pwd2' name='pwd2' placeholder="패스워드를 재입력하세요" class="required">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="email">E-Mail</label>
+                        </th>
+                        <td>
+                            <input type="text" id="email" name="email" placeholder='이메일 아이디를 입력하세요' class="required"> @
+                            <select name="domain" id="domain">
+                                <option value="nate.com" selected>nate.com</option>
+                                <option value="naver.com">naver.com</option>
+                                <option value="daum.net">daum.net</option>
+                                <option></option>
+                                <option></option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="hobby">Interests</label>
+                        </th>
+                        <td>
+                            <input type="checkbox" id="hobby1" name="hobby1"  value='sports'>
+                            <label for="hobby1">스포츠</label>
+                            <input type="checkbox" id="hobby2" name="hobby2" value='music'>
+                            <label for="hobby2">음악</label>
+                            <input type="checkbox" id="hobby3" name="hobby3" value='computer game'>
+                            <label for="hobby3">게임</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="gender">Gender</label>
+                        </th>
+                        <td>
+                            <input type="radio" id='male' name='gender' value='male'>
+                            <label for="male">남성</label>
+                            <input type="radio" id='female' name='gender' value='female'>
+                            <label for="female">여성</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="comment">Leave Comments</label>
+                        </th>
+                        <td>
+                            <textarea name="comments" id="comments" placeholder="이곳에 남기실 말을 적어주세요."></textarea>
+                        </td>
+                    </tr>
+                    <tr>                           
+                        <td colspan='2'>
+                            <input type="reset" value='CANCEL'>
+                            <input type="submit" value='SEND'>
+                        </td>
+                    </tr>  
+                </table>
+            </fieldset>
+        </form>
     </div>
 </section>
 
+<script src="js/sub/member/member.min.js"></script>
 <include src="../footer/footer.html"></include>

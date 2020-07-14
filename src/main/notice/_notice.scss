@@ -12,7 +12,9 @@
         h1{
             padding-bottom:20px; 
             margin-bottom:40px;
-            font: bold 30px/1.4 'arial'; 
+            font-size : 30px;
+            line-height: 1.4;
+            font-weight:bold;
             color: #b3b3b3; 
             text-align:center;
             position:relative;
@@ -20,7 +22,9 @@
             span{color: #547191;}
         }
         .typo{
-            font: bold 160px/1.4 'arial'; 
+            font-size : 160px;
+            line-height: 1.4;
+            font-weight:bold;
             text-transform: uppercase;
             position: absolute;
             right:-230px;
@@ -46,12 +50,15 @@
             &:last-child{margin-right: 0;}
             h2{
                 margin:30px 0 20px;    
-                font: bold 20px/1 'roboto';     
+                font-size : 20px;
+                line-height: 1;
+                font-weight:bold;    
                 color: #b3b3b3;
             }
             p{
                 color: #959494;
-                font: 14px/1.4 'roboto';
+                font-size : 14px;
+                line-height: 1.4;
                 text-align:left;
                 width:250px;
                 margin: 0 auto;
