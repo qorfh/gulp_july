@@ -23,6 +23,7 @@
     width: 100%; height: 100vh; 
     background: url(../img/visual04.jpg) no-repeat right center;
     position: relative;
+    background-size: cover;
 
     article.left{
         background:#121212;
@@ -49,7 +50,7 @@
         margin: 0 auto;
 
         h1{
-            color: violet;
+            color: #fff;
             position:absolute;
             top: 50%;
             left: 0;
