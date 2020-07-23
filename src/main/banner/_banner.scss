@@ -1,0 +1,120 @@
+$fontFamily: 'arial';
+$bgColor : #121212;
+$color: orangered;
+$banner_wid : 320px;
+$banner_num : 6;
+$imgs: (1:"face1.jpg", 2:"face2.jpg", 3:"face3.jpg", 4:"face4.jpg", 5:"face5.jpg", 6:"face6.jpg");
+
+#banner {
+    width:100%; padding:100px 0px; box-sizing:border-box; background:$bgColor;
+    overflow-x:hidden;
+
+    .inner {
+        width:1180px; margin:0px auto; position:relative;  
+
+        &::after {
+            content:''; display:block; clear:both;
+        }
+        
+        h1 {
+            width:350px; height:300px; background:$bgColor; 
+            float:left; box-sizing:border-box; padding-right:40px;
+            position:relative; z-index:2; font-size:30px; line-height:1.2; font-family:$fontFamily; color:#fff;
+            span {
+                display:block; font:14px/1.2 'arial'; color:#bbb; margin-top:20px;
+            }
+
+            .prev {
+                width:16px; height:16px; position:absolute; left:0px; bottom:40px; opacity:0.7; transition:0.5s;
+
+                &::before, &::after {background:#fff;}
+
+                &:hover {opacity:1; transform:scale(1.5);}
+            }
+            .next {
+                width:16px; height:16px; position:absolute; left:30px; bottom:40px; opacity:0.7; transition:0.5s;
+
+                &::before, &::after {background:#fff;}
+                &:hover {opacity:1; transform:scale(1.5);}
+            }
+
+            &::before {
+                content:''; display:block; width:600px; height:100%; background:$bgColor;
+                position:absolute; top:0px; left:-600px;
+            }
+        }
+
+        .banner {
+            width:830px; float:left; position:relative;
+
+            &::after {
+                content:''; width:400px; height:100%; position:absolute; top:0px; right:-400px; background:linear-gradient(to right, transparent 10%, $bgColor); z-index:2;
+            }
+
+            ul {
+                width:$banner_wid * $banner_num; top:0px; margin-left:-$banner_wid; position:relative; z-index:1;
+                li {
+                    width:$banner_wid; height:300px; float:left; box-sizing:border-box; padding:0px 10px; 
+
+                    >div {
+                        width:100%; height:100%; background:$bgColor; box-sizing:border-box; position:relative;
+                        border:1px solid #bbb; padding:36px 30px;
+                        
+
+                        p {
+                            font:16px/1.4 'arial'; color:#eee; margin-bottom:14px;
+                        }
+
+                        .txt {
+                            width:240px; height:60px;position:absolute; bottom:40px; left:30px;
+                            box-sizing:border-box; padding-left:60px;
+
+                            h2 {
+                                font:bold 15px/1 'arial'; color:#4d80b6; padding-top:5px;
+                            }
+                            span {
+                                font:13px/1 'arial'; color:#888;
+                            }
+
+                            >a {
+                                display:block; width:50px; height:50px; background:#555; border-radius:50%; position:absolute; top:0px; left:0px; background-size:cover; background-repeat:no-repeat; background-position:center;
+                            }
+                        }
+                    }
+
+                    @each $key, $img in $imgs {
+                        &[data-index="#{$key}"]>div .txt>a {background-image:url(../img/#{$img})};
+                    }
+
+                }
+            }
+
+        }
+        
+    }
+}
+
+/* tablet */
+@media screen and (max-width:$tablet){
+    #banner {
+        padding:80px 40px;
+
+        .inner {
+            width:100%;
+
+            h1 {
+                width:100%; height:230px;
+            }
+
+            .banner {
+                width:100%;
+            }
+
+        }
+    }
+}
+
+/* mobile */
+@media screen and (max-width:$mobile){
+    
+}

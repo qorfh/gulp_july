@@ -1,0 +1,97 @@
+$color:#4580be;
+
+#brand {
+    width:100%; padding:0px; box-sizing:border-box; background:#121212;
+
+    .wrap {
+        article {
+            float:left; position:relative; box-sizing:border-box; padding:50px; display:flex; flex-wrap:wrap; align-items:center; overflow:hidden;
+
+            .pic {
+                position:absolute; width:100%; height:100%; background-size:cover; background-repeat:no-repeat; background-position:center; top:0px; left:0px;
+            }
+        }
+        article:nth-of-type(1) {
+            width:40%; height:400px; background:#121212; 
+
+            .txt {
+                width:60%;
+                h2 {
+                    font:bold 16px/1 'arial'; color:$color; margin-bottom:20px;
+                }
+                p {
+                    font:bold 28px/1.2 'arial'; color:#eee;
+                }
+            }
+        }
+        article:nth-of-type(2) {
+            width:60%; height:400px; background:#000;
+            
+            .pic {
+                background-image:url(../img/con1_1.jpg); opacity:0.4;
+                transition:1s;
+                &::hover {opacity:1;}
+            }
+        }
+        article:nth-of-type(3) {
+            width:40%; height:250px; background:#000; 
+
+            .pic {
+                background-image:url(../img/con1_2.jpg); opacity:0.7;
+                transition:1s;
+                &::hover {opacity:1;}
+            }
+        }
+        article:nth-of-type(4) {
+            width:40%; height:250px; background:#121212;
+
+            h2 {
+
+                font:bold 18px/1 'arial'; color:#eee; 
+                &::before {
+                    content:''; display:block; width:40px; height:3px; background:$color; margin-bottom:15px;                    
+                }
+            }
+
+            p {font:14px/1.3 'arial'; color:#bbb;}
+
+            a {color:$color; margin-top:10px;}
+        }
+        article:nth-of-type(5) {
+            width:20%; height:250px; background:#000; 
+
+            .pic {
+                background-image:url(../img/con1_3.jpg); opacity:0.4;
+                transition:1s;
+                &::hover {opacity:1;}
+            }
+        }
+    }
+}
+
+
+
+
+/* tablet */
+@media screen and (max-width:$tablet){
+    #brand {
+        .wrap {
+            article:nth-of-type(4) {width:60%;}
+            article:nth-of-type(5) {display:none;}
+        }
+        
+    }
+}
+
+/* mobile */
+@media screen and (max-width:$mobile){
+    #brand {
+        .wrap {
+            article:nth-of-type(1) {
+                width:100%; height:300px; padding:40px;
+                .txt {width:100%;}
+            }
+            article:nth-of-type(4) {width:100%; padding:40px;}
+        }
+    }
+}

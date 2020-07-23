@@ -1,22 +1,24 @@
 // 스크롤버튼
 #scrollBtn{
     position:fixed;
-    right:50px; top:50%;
-    margin-top:-60px;
-    z-index:1;
+    right:30px; top:50%;
+    transform:translateY(-50%);
+    z-index:5;
+    
+    
 
     li{
 
         a{
             display: inline-block;
-            width:20px; height:20px; 
-            background:#fff; 
-            box-shadow : 3px 3px 5px rgba(0,0,0,0.2); 
-            margin-bottom:10px; border-radius:10px; 
+            width:4px; height:50px; 
+            background:#fff; border:1px solid #000; box-sizing:border-box;         
+            margin-bottom:10px; 
             cursor:pointer;
+            transition:0.5s;
 
 
-            &.on{ background:#000;}
+            &.on{ height:100px; background:#4580be; border:1px solid #888;}
         }
         
 

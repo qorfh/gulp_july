@@ -1,7 +1,5 @@
 
-$(document).ready(function(){	
-	
-	
+$(document).ready(function(){		
 
 	var pos;
     var pos1 = $('#visual').offset().top;
@@ -9,8 +7,7 @@ $(document).ready(function(){
 	var pos3 = $('#slide').offset().top;
 	var pos4 = $('#detail').offset().top;
 	var pos5 = $('#notice').offset().top;
-	var pos6 = $('#tabmenu').offset().top;
-	var pos7 = $('#ad').offset().top;
+	var pos6 = $('#banner').offset().top;	
 	var base = -300;
 	
 	//브라우저가 로딩완료시 setPos함수 호출
@@ -49,18 +46,13 @@ $(document).ready(function(){
 			$('.box').removeClass('on');
 			$('.box').eq(4).addClass('on');
         }
-        if(scroll >= pos6+base && scroll < pos7+base){
+        if(scroll >= pos6+base ){
 			$('#scrollBtn>li>a').removeClass('on');
 			$('#scrollBtn>li').eq(5).children('a').addClass('on');
 			$('.box').removeClass('on');
 			$('.box').eq(5).addClass('on');
 		}
-		if(scroll >= pos7+base ){
-			$('#scrollBtn>li>a').removeClass('on');
-			$('#scrollBtn>li').eq(6).children('a').addClass('on');
-			$('.box').removeClass('on');
-			$('.box').eq(6).addClass('on');
-		}
+		
 	});
 
 	//버튼 클릭시 매칭되는 박스의 위치값으로 이동
@@ -85,6 +77,7 @@ $(document).ready(function(){
 
 
 	// wheelmotion
+	/*
 	$('.box').on('mousewheel', function(e, delta){
 		e.preventDefault();
 		// console.log(delta);
@@ -109,6 +102,7 @@ $(document).ready(function(){
 	
 	
 	});
+	*/
 
 
 });

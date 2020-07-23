@@ -21,6 +21,35 @@ textarea{resize: none;}
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500&display=swap');
 
 
+.wrap::after {content:''; display:block; clear:both;}
+
+.prev {
+    display:inline-block; text-indent:-9999px; transition:0.5s;
+    
+    &::before {
+        content:''; display:block; width:100%; height:1px; background:#111; position:absolute; top:50%; left:0%;
+        transform-origin:left center; transform:rotate(-40deg);
+    }
+    &::after {
+        content:''; display:block; width:100%; height:1px; background:#111; position:absolute; top:50%; left:0%;
+        transform-origin:left center; transform:rotate(40deg);
+    }
+}
+
+.next {
+    display:inline-block; text-indent:-9999px; transition:0.5s;
+    
+    &::before {
+        content:''; display:block; width:100%; height:1px; background:#111; position:absolute; top:50%; left:0%;
+        transform-origin:right center; transform:rotate(-40deg);
+    }
+    &::after {
+        content:''; display:block; width:100%; height:1px; background:#111; position:absolute; top:50%; left:0%;
+        transform-origin:right center; transform:rotate(40deg);
+    }
+}
+
+
 // main
 @import 'main/header/header';
 @import 'main/visual/visual';
@@ -28,8 +57,8 @@ textarea{resize: none;}
 @import 'main/slide/slide';
 @import 'main/detail/detail';
 @import 'main/notice/notice';
-@import 'main/tabmenu/tabmenu';
-@import 'main/ad/ad';
+@import 'main/banner/banner';
+@import 'main/brand/brand';
 @import 'main/footer/footer';
 
 // sub
