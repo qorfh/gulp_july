@@ -1,12 +1,14 @@
 /* slide */
 #slide{
     width: 100%;
+    height: 100vh;
 
-    .wrap{overflow: hidden;}
+
+    .wrap{overflow: hidden; height: 100%;}
     article{
         float:left;
         width:25%;
-        height:600px;
+        height: 100%;
         position:relative;
         cursor: pointer;
         overflow:hidden;
@@ -42,6 +44,7 @@
             transform: rotate(-90deg);
             z-index:2;
         }
+        img{height:100%;}
     }
     >h1{
         display:none;
@@ -61,8 +64,7 @@
 /* ------tablet-------- */
 @media screen and (max-width:$tablet){  
 
-    /* slide */
-    #news .inner .wrap .contents{width:40%;}
+
     
 }
 
@@ -71,11 +73,12 @@
 
      /* slide */
      #slide{
+         height: auto;
          >h1{margin-bottom: 0;}
         article{
             width: 100%;
             height: 150px;
-
+            img{height:auto;}
             h2{font-size:18px;}
             span{display: none;}
         }

@@ -11,7 +11,7 @@
         article{float: left;}
         .wrap{
             article h1{
-                font-size:56px;
+                font-size:60px;
                 line-height: 1.6;
                 margin-bottom: 25px;
                 color: #fff;
@@ -20,8 +20,9 @@
             }
 
             .contents{
-                float:right;
-                width:40%;
+                float: left;
+                width:43%;
+                margin-left: 140px;
 
                 ul li{
                     height:50px;
@@ -47,7 +48,7 @@
                         float:left;
                         color:#fff;
                         padding-top:3px;
-                        font-size : 18px;
+                        font-size : 20px;
                         line-height: 1.4;
                     }
                 }
@@ -93,10 +94,16 @@
     /* news */
     #news .inner{
         width: 100%;
-        article{
-            width:50%;
-            h1{font-size:46px;}
+        .wrap{
+            article{
+                width:50%;
+                h1{font-size:46px;}
+            }
+             .contents{
+                margin-left: 26px;
+            }
         }
+        
     }
 }
 
@@ -108,13 +115,13 @@
         padding: 80px 20px;box-sizing: border-box;  
         
         .inner{
-            article{width: 100%;}
             .wrap{
                 .pic{
                     width:100%; 
                     height:300px;
                 }
                 article{
+                    width:100%;
                     &:nth-of-type(2){
                         width:100%; padding-top:40px;
                     }
@@ -122,6 +129,7 @@
                 }
                 .contents{
                     .shortcuts-2{float:left;}
+                    ul li p{font-size: 18px;}
                     a{
                         height: 50px; margin-bottom:20px;
                         .circle{width: 50%;border-radius: 50px; height: 50px;}
