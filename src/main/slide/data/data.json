@@ -1,0 +1,34 @@
+{
+    "data" : [
+        {
+            "img":"architecture01.jpg",
+            "date":"2020.07.01",
+            "title":"title1",
+            "desc":"content1 comes here."
+        },
+        {
+            "img":"architecture02.jpg",
+            "date":"2020.07.02",
+            "title":"title2",
+            "desc":"content2 comes here."
+        },
+        {
+            "img":"architecture03.jpg",
+            "date":"2020.07.03",
+            "title":"title3",
+            "desc":"content3 comes here."
+        },
+        {
+            "img":"architecture04.jpg",
+            "date":"2020.07.04",
+            "title":"title4",
+            "desc":"content4 comes here."
+        },
+        {
+            "img":"architecture05.jpg",
+            "date":"2020.07.05",
+            "title":"title5",
+            "desc":"content5 comes here."
+        }
+    ]
+}
