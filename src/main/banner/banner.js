@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    
     var $wrap = $('#banner');
     var $slide = $wrap.find('.banner>ul');
     var $prev = $wrap.find('.prev');

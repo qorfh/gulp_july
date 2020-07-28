@@ -1,63 +1,90 @@
+$slide : 5;
+$imgs : (1:"architecture01.jpg", 2:"architecture02.jpg", 3:"architecture03.jpg", 4:"architecture04.jpg", 5:"architecture05.jpg");
+
 /* slide */
 #slide{
     width: 100%;
     height: 100vh;
+    background: #000;
 
 
-    .wrap{overflow: hidden; height: 100%;}
-    article{
-        float:left;
-        width:20%;
+    .wrap{
+        overflow: hidden; 
         height: 100%;
-        position:relative;
-        cursor: pointer;
-        overflow:hidden;
+        position: relative;
 
-        &::before{
-            content:'';
-            display:block;
-            width:100%;
-            height:100%;
-            background: #000;
-            opacity: .4;
+        li{
+            float:left;
+            width:(100% / $slide);
+            height: 100%;
             position:absolute; 
-            top:0px; left:0px; 
-            transition:1s;
+            bottom:0px; 
+            cursor: pointer;
+            overflow:hidden;
+
+            
+
+            &::before{
+                content:''; display:block; width:100%; height:100%; position:absolute; top:0px; left:0px; background-size:cover; background-position:center; transition:0.5s;
+            }
+
+            &::after{
+                content:'';
+                display:block;
+                width:100%;
+                height:100%;
+                background: #000;
+                opacity: .5;
+                position:absolute; 
+                top:0px; left:0px; 
+                transition:1s;
+            }
+
+            &:hover:after {opacity:0.2;}
+
+            @each $key, $img in $imgs{
+                &:nth-of-type(#{$key}){
+                    left:(100%/$slide)*($key - 1);
+                    transition-delay:(0.1s * ($key - 1));
+                }
+                &:nth-of-type(#{$key})::before{
+                    background-image:url(../img/#{$img});
+                }
+            }
+
+            &.on {
+                left:0%; opacity:1; z-index:3;
+            }
+            &.off {
+                transform:scale(0.2) rotateY(180deg); opacity:0; z-index:1;
+            }
+
+            h2{
+                font-size : 20px;
+                line-height: 1.4;
+                letter-spacing: 2px;
+                position:absolute;
+                top:40px;
+                left:40px;
+                text-transform: uppercase;
+                color:#f7f7f7;
+                z-index:2;
+            }
+            span{
+                font-size : 11px;
+                line-height: 1.4;
+                position:absolute;
+                bottom:80px;
+                left:-15px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                color:#f7f7f7;
+                transform: rotate(-90deg);
+                z-index:2;
+            }
+            img{height:100%;}
         }
 
-        &::after {
-            content:''; display:block; width:100%; height:100%; background:#5783b3; opacity:0;
-            position:absolute; top:0px; left:0px; 
-            transition:1s;
-        }
-
-        // &:hover::after {opacity:0.7;}
-        &:hover:before {opacity:0;}
-
-        h2{
-            font-size : 20px;
-            line-height: 1.4;
-            letter-spacing: 2px;
-            position:absolute;
-            top:40px;
-            left:40px;
-            text-transform: uppercase;
-            color:#f7f7f7;
-            z-index:2;
-        }
-        span{
-            font-size : 11px;
-            line-height: 1.4;
-            position:absolute;
-            bottom:80px;
-            left:-15px;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            color:#f7f7f7;
-            transform: rotate(-90deg);
-            z-index:2;
-        }
-        img{height:100%;}
     }
     >h1{
         display:none;
@@ -72,6 +99,34 @@
 
         span{color: #547191;}
     }
+
+    .con{
+        width:(100% - (100%/$slide)); height:100%; z-index:2; right:-100%; top:0px; opacity:0; box-sizing:border-box; position:absolute;  transition:1.5s; 
+
+        .inner{
+            width: 100%; height: 100%;
+            padding: 200px;
+            box-sizing: border-box;
+            color: #fff;
+            
+            .pic{
+                width: 100%; height: 200px;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+        
+        .close {
+            font:bold 16px/1 'arial'; 
+            color:lightcyan;
+            position: absolute;
+            top: 50px; right: 50px;
+        }
+
+        &.on {
+            right:0%; opacity:1;
+        }
+    }   
 }
 
 /* ------tablet-------- */
