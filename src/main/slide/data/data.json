@@ -3,32 +3,32 @@
         {
             "img":"architecture01.jpg",
             "date":"2020.07.01",
-            "title":"title1",
-            "desc":"content1 comes here."
+            "title":"Dong Da Jie Mixed Use Development",
+            "desc":"This development solves an interesting challenge of combining offices, condominiums, and supermarket in a zone of emerging commercial development that promises to become a crucial linkage between the city center and its eastern sector."
         },
         {
             "img":"architecture02.jpg",
             "date":"2020.07.02",
-            "title":"title2",
-            "desc":"content2 comes here."
+            "title":"Gallery of Hainan Blue Bay Westin",
+            "desc":"From the architect. The project is located at the most east end of the Clear Water Bay, Lingshui County of Hainan. Blue sky and sea, white sand constitute superior natural landscape of the base."
         },
         {
             "img":"architecture03.jpg",
             "date":"2020.07.03",
-            "title":"title3",
-            "desc":"content3 comes here."
+            "title":"The Base Downtown Phuket By Open Box",
+            "desc":"This place is The Base Downtown Phuket Condominium by Open Box. Photography team » W Workspace Photographer » Wison Tungthunya"
         },
         {
             "img":"architecture04.jpg",
             "date":"2020.07.04",
-            "title":"title4",
-            "desc":"content4 comes here."
+            "title":"Redefining luxury living",
+            "desc":"Opulent amenities and a great location are no longer enough to differentiate your property from competitors. Affluent residents today expect their lifestyle to have a technology component, and the easiest way to meet (and exceed) that expectation is with a feature-rich mobile app."
         },
         {
             "img":"architecture05.jpg",
             "date":"2020.07.05",
-            "title":"title5",
-            "desc":"content5 comes here."
+            "title":"Templo Expiatorio de la Sagrada Familia",
+            "desc":"El Templo Expiatorio de la Sagrada Familia (en catalán, Temple Expiatori de la Sagrada Família), conocido simplemente como la Sagrada Familia, es una basílica católica de Barcelona (España), diseñada por el arquitecto Antoni Gaudí. Iniciada en 1882, todavía está en construcción."
         }
     ]
 }
