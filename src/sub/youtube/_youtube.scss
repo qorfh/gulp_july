@@ -1,0 +1,169 @@
+@charset 'utf-8';
+
+
+$colors : (
+    1:(
+        bg:chartreuse, 
+        shadow:rgba(128, 255, 0, 0.7),
+        opacity:0
+    ),
+    2:(
+        bg:orange, 
+        shadow:rgba(255, 166, 0, 0.7),
+        opacity:0.1
+    ),
+    3:(
+        bg:hotpink, 
+        shadow:rgba(255, 105, 180, 0.7),
+        opacity:0.2
+    ),
+    4:(
+        bg:violet, 
+        shadow:rgba(238, 130, 238, 0.7),
+        opacity:1
+    ),
+    5:(
+        bg:blueviolet, 
+        shadow:rgba(137, 43, 226, 0.7),
+        opacity:0.2
+    ),
+    6:(
+        bg:cornflowerblue, 
+        shadow:rgba(100, 148, 237, 0.7),
+        opacity:0.1
+    ),
+    7:(
+        bg:#3cc1d3, 
+        shadow:rgba(60, 193, 211, 0.7),
+        opacity:0
+    )
+);
+
+@keyframes circle{
+    0% {width:550px; height:550px;}
+    50% {width:0px; height:0px;}
+    80% {width:750px; height:750px;}
+    100% {width:550px; height:550px;}
+}
+
+
+
+.youtube {
+    width:100%; 
+    overflow:hidden; position:relative;
+   
+
+    .youtubeWrap{
+        width: 100%;
+        height: 100vh;
+
+        article.pic {
+            width:450px; height:787px; position:absolute; top:50%; right:50%; margin-top:-393px; 
+
+            .circle {
+                width:550px; height:550px; border-radius:50%; background:#f1bbff;
+                position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); transition:1s; opacity:0.4;
+
+                &.on {
+                    animation:circle ease-out 0.5s 1;
+                }
+            }
+
+            .phone {
+                width:100%; height:100%; position:absolute; top:70px; left:0px;
+                background:url(../img/apple.png) no-repeat center; 
+                background-size: 824px;
+            }
+        }
+
+        .inner{
+            width: 1180px; margin: 0px auto;
+
+            .wrap{
+                width: 350px;
+                height: 200px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-140%, -50%) rotate(-120deg);
+
+                
+
+                &::after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+
+                .item{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    background: #aaa;
+                    opacity: 0.5;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 100px;
+                    transition: 0.5s;
+                    color: #fff;
+                    border-radius: 10px;
+
+                    @each $key, $style in $colors {
+                        &:nth-of-type(#{$key}) {
+                            transform:rotate(#{30*$key}deg) translateX(700px);
+                            opacity:map-get($style,opacity);
+                        }
+
+                        &[data-index="#{$key}"] {
+                            background-color:map-get($style,bg);
+                            box-shadow:10px 10px 30px #{map-get($style,shadow)};
+
+                        }
+                    }
+
+                    
+
+                    .inner{
+                        width: 100%; 
+                        box-sizing: border-box;
+                        min-height: 200px !important;
+                        padding: 0px !important;
+                        cursor: pointer;
+
+                        .pic{
+                            width: 100%; height: 200px;
+                            background-position: center;
+                            background-size: cover;
+                            margin-bottom: 15px;
+                        }
+
+                    
+
+                    }
+                }
+            }
+        }
+
+        .prevBtn {
+            display:block; width:40px; height:40px; position:absolute; bottom:160px; right:50px; 
+            background: url(../img/btn_arw_left.png);
+        }
+        .nextBtn {
+            display:block; width:40px; height:40px; position:absolute; bottom:120px; right:50px; 
+            background: url(../img/btn_arw_right.png);
+        }
+    }
+
+    .pop{
+        position: absolute;
+        top: 240px;
+        bottom: 0;
+        left: 8px;
+        box-sizing: border-box;
+        width: 420px;
+        height: 250px;
+    }
+}

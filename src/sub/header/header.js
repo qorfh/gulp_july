@@ -18,15 +18,15 @@ $(document).ready(function(){
         // 웹
         if(wid >= 1000){
             $("#gnbMo").removeClass("on");
-            $("header_sub").on("mouseenter", openSub);
+            $("#header_sub").on("mouseenter", openSub);
         
-            $("header_sub").on("mouseleave", closeSub);
+            $("#header_sub").on("mouseleave", closeSub);
         }else{
             // 타블릿 이하
             // off() 있는 함수를 제거하는 함수
-            $("header_sub").off("mouseenter");
+            $("#header_sub").off("mouseenter");
         
-            $("header_sub").off("mouseleave");
+            $("#header_sub").off("mouseleave");
         }
     }
     
@@ -42,7 +42,6 @@ $(document).ready(function(){
     });
 
     $(".is-close-menu").on('click', function(){
-        console.log('cl')
         $("#gnbMo").removeClass("on");
     });
 
@@ -57,6 +56,14 @@ $(document).ready(function(){
         if(isOpen == "none"){
             $(this).next("ul").slideDown();
         }
+    });
+
+    //1depth메뉴 활성화 유지    
+    $("#header_sub #gnb li").on('mouseenter',function(){
+        $(this).children('a').addClass('on');
+    });
+    $("#header_sub #gnb li").on('mouseleave',function(){
+        $(this).children('a').removeClass('on');
     });
 
     function openSub(){

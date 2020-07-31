@@ -67,6 +67,7 @@ $(document).ready(function(){
             $(this).next("ul").slideDown();
         }
     });
+    
 
     function openSub(){
         $("#gnb ul").stop().slideDown(speed);
