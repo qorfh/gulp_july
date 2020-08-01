@@ -19,37 +19,37 @@ $(document).ready(function(){
 		if(scroll >= pos1+base && scroll < pos2+base){
 			$('#scrollBtn>li>a').removeClass('on');
 			$('#scrollBtn>li').eq(0).children('a').addClass('on');
-			$('.box').removeClass('on');
+			// $('.box').removeClass('on');
 			$('.box').eq(0).addClass('on');
 		}
 		if(scroll >= pos2+base && scroll < pos3+base){
 			$('#scrollBtn>li>a').removeClass('on');
 			$('#scrollBtn>li').eq(1).children('a').addClass('on');
-			$('.box').removeClass('on');
+			// $('.box').removeClass('on');
 			$('.box').eq(1).addClass('on');
 		}
 		if(scroll >= pos3+base && scroll < pos4+base){
 			$('#scrollBtn>li>a').removeClass('on');
 			$('#scrollBtn>li').eq(2).children('a').addClass('on');
-			$('.box').removeClass('on');
+			// $('.box').removeClass('on');
 			$('.box').eq(2).addClass('on');
         }
         if(scroll >= pos4+base && scroll < pos5+base){
 			$('#scrollBtn>li>a').removeClass('on');
 			$('#scrollBtn>li').eq(3).children('a').addClass('on');
-			$('.box').removeClass('on');
+			// $('.box').removeClass('on');
 			$('.box').eq(3).addClass('on');
         }
         if(scroll >= pos5+base && scroll < pos6+base){
 			$('#scrollBtn>li>a').removeClass('on');
 			$('#scrollBtn>li').eq(4).children('a').addClass('on');
-			$('.box').removeClass('on');
+			// $('.box').removeClass('on');
 			$('.box').eq(4).addClass('on');
         }
         if(scroll >= pos6+base ){
 			$('#scrollBtn>li>a').removeClass('on');
 			$('#scrollBtn>li').eq(5).children('a').addClass('on');
-			$('.box').removeClass('on');
+			// $('.box').removeClass('on');
 			$('.box').eq(5).addClass('on');
 		}
 		

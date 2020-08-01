@@ -9,8 +9,15 @@ $imgs: (1:"face1.jpg", 2:"face2.jpg", 3:"face3.jpg", 4:"face4.jpg", 5:"face5.jpg
     width:100%; padding:100px 0px; box-sizing:border-box; background:$bgColor;
     overflow-x:hidden;
 
+    &.on .inner{
+        margin-top: 0;
+        opacity: 1;
+    }
     .inner {
         width:1180px; margin:0px auto; position:relative;  
+        margin-top: 5%;
+        opacity: 0;
+        transition: .7s;
 
         &::after {
             content:''; display:block; clear:both;

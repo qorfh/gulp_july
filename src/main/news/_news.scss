@@ -4,6 +4,8 @@
     box-sizing: border-box; 
     background: #121212; 
 
+    &.on .inner .wrap article{top:50%; opacity:1;}
+
     .inner{
         width: 1180px; margin: 0 auto;
         height: 100%;
@@ -15,9 +17,11 @@
 
             article {
                 position: absolute;
-                top: 50%;    
+                top: 60%;    
                 left: 30px;
                 transform: translateY(-50%);
+                transition: .7s;
+                opacity:0;
 
                 h1{
                     font-size:60px;

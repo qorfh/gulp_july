@@ -3,6 +3,18 @@
     background: #121212;
     height:100vh;
     box-sizing:border-box;
+    overflow:hidden;
+
+    &.on{
+        .right{
+            margin-right: 0px;
+            opacity: 1;
+        }
+        .sub-box{
+            margin-left: 0;
+            opacity: 1;
+        }
+    }
 
     .wrap .inner{
         width:1180px;
@@ -13,6 +25,9 @@
         width:30%;
         height: 100vh;
         overflow: hidden;
+        margin-right: -80px;
+        opacity: 0;
+        transition: .7s;
 
         img{
             width:100%;
@@ -24,6 +39,9 @@
         color: #fff;
         width:580px;
         margin:80px auto 0;
+        margin-left: -110px;
+        opacity: 0;
+        transition: .7s;
 
         h1{
             font-size : 100px;

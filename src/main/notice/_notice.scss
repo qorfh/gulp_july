@@ -8,8 +8,25 @@
     position: relative; 
     overflow: hidden;
 
+    &.on {
+        
+        
+        .inner{
+            margin-top: 0;
+            opacity: 1;
+
+            .typo{
+                right:-150px;
+                opacity: 1;
+            }
+        }
+    }
+    
     .inner{
         width: 1180px; margin: 0 auto;
+        margin-top: 10%;
+        transition: .7s;
+        opacity: 0;
 
         h1{
             padding-bottom:20px; 
@@ -29,9 +46,11 @@
             font-weight:bold;
             text-transform: uppercase;
             position: absolute;
-            right:-150px;
+            right:-300px;
             top:0px;
             color: rgba(255,255,255,.03);
+            transition: .7s;
+            opacity: 0;
         }
         .wrap article{
             float: left; 
