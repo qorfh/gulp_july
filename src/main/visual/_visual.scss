@@ -34,6 +34,13 @@
     position: relative;
     background-size: cover;
 
+    &.on{
+        .inner{
+            .pagination{left: 0; opacity: 1;}
+            h1{left: 0; opacity: 1;}
+        }
+    }
+
     article.left{
         background:#121212;
         width:20%;
@@ -62,7 +69,9 @@
             color: #fff;
             position:absolute;
             top: 50%;
-            left: 0;
+            left:-50px;
+            transition: 1s .5s;
+            opacity: 0;
             transform: translate(85px,0);
             text-transform: uppercase;
             letter-spacing: 3px;
@@ -75,7 +84,10 @@
             color: #fff;
             position:absolute;
             top:20%;
-            transform:translateY(-40%);
+            left:-50px;
+            transform: translate(85px, 0);
+            transition: 1s;
+            opacity: 0;
 
             strong{
                 font-size:80px;

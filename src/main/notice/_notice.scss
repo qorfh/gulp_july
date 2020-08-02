@@ -46,10 +46,10 @@
             font-weight:bold;
             text-transform: uppercase;
             position: absolute;
-            right:-300px;
+            right:-160px;
             top:0px;
             color: rgba(255,255,255,.03);
-            transition: .7s;
+            transition: .3s .5s;
             opacity: 0;
         }
         .wrap article{
